@@ -1,0 +1,26 @@
+saldoVitorias()
+function saldoVitorias(vitoria, derrota) {
+    var saldoVitorias = vitoria + derrota;
+    var elo;
+        if(saldoVitorias <= 10) {
+            elo = "Ferro";
+        } else if (saldoVitorias >= 11 && saldoVitorias <= 20){
+            elo = "Bronze";
+        } else if (saldoVitorias >= 21 && saldoVitorias <= 50){
+            elo = "Prata";
+        } else if (saldoVitorias >= 51 && saldoVitorias <= 80){
+            elo = "Ouro"
+        } else if (saldoVitorias >= 81 && saldoVitorias <= 90){
+            elo = "Diamante"
+        } else if (saldoVitorias >= 91 && saldoVitorias <= 100){
+            elo = "Lendário"
+        } else if (saldoVitorias >= 101 ){
+            elo = "Imorta"
+        }
+        return `O Herói tem um saldo de ${saldoVitorias} vitórias e está no nível de ${elo}`;
+    }
+
+
+console.log(saldoVitorias(11,6));
+
+
